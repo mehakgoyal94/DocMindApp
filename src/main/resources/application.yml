@@ -1,0 +1,31 @@
+server:
+  port: 8080
+
+spring:
+  application:
+    name: docmind-rag-java
+
+  ai:
+    openai:
+      api-key: ${OPENAI_API_KEY}
+      chat:
+        options:
+          model: gpt-4.1-mini
+          temperature: 0.2
+      embedding:
+        options:
+          model: text-embedding-3-small
+
+    vectorstore:
+      qdrant:
+        host: localhost
+        port: 6334
+        collection-name: docmind_chunks
+        initialize-schema: true
+
+docmind:
+  rag:
+    chunk-size: 900
+    chunk-overlap: 150
+    top-k: 5
+    min-score: 0.70

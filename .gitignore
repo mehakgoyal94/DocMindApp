@@ -1,0 +1,36 @@
+# Maven build output
+target/
+*.jar
+*.war
+!.mvn/wrapper/maven-wrapper.jar
+
+# IntelliJ IDEA
+.idea/
+*.iml
+*.iws
+*.ipr
+out/
+
+# Eclipse / VS Code
+.classpath
+.project
+.settings/
+.vscode/
+
+# Logs
+*.log
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Organization-specific sample documents — do not commit
+PRS-FAQ.pdf
+*.pdf
+
+# Environment / secrets — never commit real keys
+.env
+.env.*
+application-local.yml
+application-local.yaml
+application-secret*.yml
